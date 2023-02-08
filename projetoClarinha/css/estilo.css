@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1;
+    font-family:  "Arial";
+    background: url(../img/patinhas.jpg);
+}
+
+header{
+    background: #660066;
+    padding: 5px 0;
+}
+
+.logo{
+    padding: 10px;
+}
+
+h1{
+    text-align:center;
+    color:#2b0c2b;
+    font-size: 1.4cm;
+}
+
+#titulos{
+    background-color: #a879a8;
+    font-size: 0.5cm;
+}
+
+table, th, td{
+    border: 2px solid #2b0e2b;
+}
+
+table{
+    background-color: white;
+    border-collapse: collapse;
+    margin: auto;
+    color: #2b0e2b;
+}
+
+th, td{
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+}
+
+th{
+    font-weight: bold;
+}
