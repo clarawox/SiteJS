@@ -19,7 +19,6 @@
         </h1>
 
         <table>
-
             <tr id="titulos">
                 <th>Nome</th>
                 <th>Produto</th>
@@ -30,23 +29,23 @@
 
             <tr class="cliente">
                 <td class="nome">Margarete</td>
-                <td>Jogo Americano (4 peças) - Rosa</td>
-                <td class="qtd">8</td>
-                <td class="valor">60.00</td>
+                <td class="prod">Jogo Americano (4 peças) - Rosa</td>
+                <td class="qtd">5</td>
+                <td class="valor">9.00</td>
                 <td class="total">0</td>
             </tr>
 
             <tr class="cliente">
                 <td class="nome">Cleide</td>
-                <td>Tapetes de cozinha (3 peças) - Azul</td>
+                <td class="prod">Tapetes de cozinha (3 peças) - Azul</td>
                 <td class="qtd">9</td>
-                <td class="valor">50.30</td>
+                <td class="valor">d</td>
                 <td class="total">0</td>
             </tr>
 
             <tr class="cliente">
                 <td class="nome">Ângelo</td>
-                <td>Pulseira Cristal Colorida</td>
+                <td class="prod">Pulseira Cristal Colorida</td>
                 <td class="qtd">20</td>
                 <td class="valor">90.75</td>
                 <td class="total">0</td>
@@ -54,22 +53,67 @@
 
             <tr class="cliente">
                 <td class="nome">Daniele</td>
-                <td>Pulseira Cristal Vermelha</td>
-                <td class="qtd">1</td>
+                <td class="prod">Pulseira Cristal Vermelha</td>
+                <td class="qtd">p</td>
                 <td class="valor">25.00</td>
                 <td class="total">0</td>
             </tr>
 
             <tr class="cliente">
                 <td class="nome">Quezia</td>
-                <td>Pulseira Cristal Rosa</td>
+                <td class="prod">Pulseira Cristal Rosa</td>
                 <td class="qtd">4</td>
                 <td class="valor">26.00</td>
                 <td class="total">0</td>
             </tr>
         </table>
     </div>
+
+    <h1 class="titulo">
+        <img src="../img/emoji.png"> </img>
+        Nova Encomenda:
+    </h1>
+    
+    <form action:"/html" method="post">
+            <div class="divForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" class="input-padrao"/>
+            </div>
+
+            <div class="divForm">
+                <label for="qtd" >Quantidade:</label>
+                <input type="number" id="qtd" class="input-padrao"/>
+            </div>
+
+            <div class="divForm">
+            <label>Produto:<br></a>
+            <select name="prod">
+                <option value="JogoRosa">Jogo Americano (4 peças) - Rosa</option>
+                <option value="JogoAma">Jogo Americano (4 peças) - Amarelo</option>
+                <option value="JogoVerde">Jogo Americano (4 peças) - Verde</option>
+                <option value="TapRosa">Tapetes Cozinha (3 peças) - Rosa</option>
+                <option value="TapAma">Tapetes Cozinha (3 peças) - Amarelo</option>
+                <option value="TapVerm">Tapetes Cozinha (3 peças) - Vermelho</option>
+                <option value="PulCol">Pulseira Cristal - Colorida</option>
+                <option value="PulVerm">Pulseira Cristal - Vermelha</option>
+                <option value="PulRosa">Pulseira Cristal - Rosa</option>
+                <option value="PulLilas">Pulseira Cristal - Lilás</option>
+                <option value="PulPre">Pulseira Cristal - Preta</option>
+            </select>
+            </div>
+
+            <div class="divForm">
+                <label for="val">Preço Unitário(R$):</label>
+                <input type="number" id="val" class="input-padrao"/>
+            </div>
+
+            <div class="button">
+                <button type="submit" class="Enviar" 
+                onclick="alert('Formulário enviado com sucesso!')"> Enviar seu pedido</button>
+            </div>
+        </form>
 </body>
+
 
 <script src="../js/script.js"></script>
 

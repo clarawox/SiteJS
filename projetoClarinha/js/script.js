@@ -1,6 +1,68 @@
 var titulo = document.querySelector(".titulo")
 titulo.innerHTML = '<img src="../img/emoji.png"> Lista de Encomendas';
 
+var clientes = document.querySelectorAll(".cliente");
+console.log(clientes);
+console.log(clientes.length); //conta a quantidade de linhas na array
+
+for (var i = 0; i < clientes.length; i++) {
+    //Captura a quantidade encomendada
+    var qtd = clientes[i].querySelector(".qtd").textContent;
+    //console.log(qtd)
+
+    //Captura o valor unitário
+    var val = clientes[i].querySelector(".valor").textContent;
+    //console.log(val)
+
+    //Pega o nome
+    var nome = clientes[i].querySelector(".nome").textContent;
+    //Verifica se a quantidade recebida é válida
+
+    if (!isNaN(val) && !isNaN(qtd)) {
+        //Calcula o valor total
+        var valTotal = qtd * val;
+        //console.log(valTotal)
+        clientes[i].querySelector(".valor").textContent = parseFloat(val).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        clientes[i].querySelector(".total").textContent = valTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+    else if(!isNaN(val) && !isNaN(qtd)){
+        clientes[i].querySelector(".valor").textContent = "Valor e quantidade inválidos";
+            clientes[i].querySelector(".total").textContent = "Valor e quantidade inválidos";
+            clientes[i].querySelector(".qtd").textContent = "Valor e quantidade inválidos";
+            //muda apenas a cor da fonte do valor
+            clientes[i].classList.add("Invalid");
+
+    }
+    else {
+        if (isNaN(val)) {
+            clientes[i].querySelector(".valor").textContent = "Valor inválido";
+            clientes[i].querySelector(".total").textContent = "Valor inválido";
+            clientes[i].querySelector(".qtd").textContent = "Valor inválido";
+            //muda apenas a cor da fonte do valor
+            clientes[i].classList.add("Invalid");
+            // clientes[i].querySelector(".nome").classList.add("Invalid");
+            // clientes[i].querySelector(".prod").classList.add("Invalid");
+            // clientes[i].querySelector(".qtd").classList.add("Invalid");
+            // clientes[i].querySelector(".valor").classList.add("Invalid");
+            // clientes[i].querySelector(".total").classList.add("Invalid");
+
+            //console.log("O valor inserido pelo(a) cliente "+nome+" é inválido");
+        }
+
+        else if (isNaN(qtd)) {
+            clientes[i].querySelector(".qtd").textContent = "Quantidade inválida";
+            clientes[i].querySelector(".valor").textContent = "Quantidade inválida";
+            clientes[i].querySelector(".total").textContent = "Quantidade inválida";
+            //muda apenas a cor do fundo da quantidade
+            clientes[i].classList.add("Invalid");
+            //console.log("A quantidade inserida pela cliente "+nome+" é inválida");
+        }
+        else {
+        }
+    }
+}
+
+
 //ROTINA DE CALCULO DO VALOR TOTAL
 //captura os dados do cliente
 // var cliente = document.querySelector(".cliente");
@@ -52,55 +114,3 @@ titulo.innerHTML = '<img src="../img/emoji.png"> Lista de Encomendas';
 // cliente3.querySelector(".total3").textContent = valTotal3
 
 //-----------------------------------------------------------------
-var clientes = document.querySelectorAll(".cliente");
-console.log(clientes);
-console.log(clientes.length); //conta a quantidade de linhas na array
-
-
-
-
-for(var i=0; i < clientes.length; i++){
-    //Captura a quantidade encomendada
-    var qtd = clientes[i].querySelector(".qtd").textContent
-    //console.log(qtd)
-
-    //Captura o valor unitário
-    var val = clientes[i].querySelector(".valor").textContent
-    //console.log(val)
-
-    //Pega o nome
-    var nome = clientes[i].querySelector(".nome").textContent
-    //Verifica se a quantidade recebida é válida
-    if(isNaN(val)&&isNaN(qtd)){
-        //altera a cor da fonte da linha inteira para vermelho
-        clientes[i].style.color="darkred"
-        //altera a cor do fundo da linha inteira para vermelho
-        clientes[i].style.backgroundColor="lightcoral"
-        clientes[i].querySelector(".qtd").textContent = "Quantidade inválida";
-        clientes[i].querySelector(".valor").textContent = "Valor  inválido";
-        console.log("O valor e a quantidade inseridos pelo(a) cliente "+nome+" são inválidos")
-    }
-    else{
-        if(isNaN(val)){
-            clientes[i].querySelector(".valor").textContent = "Valor  inválido";
-            //muda apenas a cor da fonte do valor
-            clientes[i].querySelector(".valor").style.color="red"
-            console.log("O valor inserido pelo(a) cliente "+nome+" é inválido")
-        }
-
-        else if (isNaN(qtd)){
-            clientes[i].querySelector(".qtd").textContent = "Quantidade inválida";
-            //muda apenas a cor do fundo da quantidade
-            clientes[i].querySelector(".qtd").style.backgroundColor="lightcoral"
-            console.log("A quantidade inserida pela cliente "+nome+" é inválida")
-        }
-        else{
-         //Calcula o valor total
-        var valTotal = qtd*val
-        //console.log(valTotal)
-        clientes[i].querySelector(".valor").textContent = parseFloat(val).toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
-        clientes[i].querySelector(".total").textContent = valTotal.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
-        }
-    }
-}
-
