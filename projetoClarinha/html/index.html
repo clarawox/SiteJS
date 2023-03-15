@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <link href="../css/estilo.css" rel="stylesheet">
     <title>Sil Fazendo Arte</title>
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <img src="../img/logo.png" width="160" title = "Sil Fazendo Arte" class ="logo"></img>
+            <img src="../img/logo.png" width="160" title="Sil Fazendo Arte" class="logo"></img>
         </div>
     </header>
 
     <div class="tabela">
         <h1 class="titulo">
             <img src="../img/emoji.png"> </img>
-            Encomendas:
+            Lista de encomendas:
         </h1>
 
         <table>
@@ -39,7 +41,7 @@
                 <td class="nome">Cleide</td>
                 <td class="prod">Tapetes de cozinha (3 peças) - Azul</td>
                 <td class="qtd">9</td>
-                <td class="valor">d</td>
+                <td class="valor">20.00</td>
                 <td class="total">0</td>
             </tr>
 
@@ -54,7 +56,7 @@
             <tr class="cliente">
                 <td class="nome">Daniele</td>
                 <td class="prod">Pulseira Cristal Vermelha</td>
-                <td class="qtd">p</td>
+                <td class="qtd">4</td>
                 <td class="valor">25.00</td>
                 <td class="total">0</td>
             </tr>
@@ -73,47 +75,46 @@
         <img src="../img/emoji.png"> </img>
         Nova Encomenda:
     </h1>
-    
+
     <form action:"/html" method="post">
-            <div class="divForm">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" class="input-padrao"/>
-            </div>
+        <div class="divForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" class="input-padrao"/>
+        </div>
 
-            <div class="divForm">
-                <label for="qtd" >Quantidade:</label>
-                <input type="number" id="qtd" class="input-padrao"/>
-            </div>
+        <div class="divForm" >
+            <label for="qtd">Quantidade:</label>
+            <input type="number" id="qtd" class="input-padrao"/>
+        </div>
 
-            <div class="divForm">
-            <label>Produto:<br></a>
-            <select name="prod">
-                <option value="JogoRosa">Jogo Americano (4 peças) - Rosa</option>
-                <option value="JogoAma">Jogo Americano (4 peças) - Amarelo</option>
-                <option value="JogoVerde">Jogo Americano (4 peças) - Verde</option>
-                <option value="TapRosa">Tapetes Cozinha (3 peças) - Rosa</option>
-                <option value="TapAma">Tapetes Cozinha (3 peças) - Amarelo</option>
-                <option value="TapVerm">Tapetes Cozinha (3 peças) - Vermelho</option>
-                <option value="PulCol">Pulseira Cristal - Colorida</option>
-                <option value="PulVerm">Pulseira Cristal - Vermelha</option>
-                <option value="PulRosa">Pulseira Cristal - Rosa</option>
-                <option value="PulLilas">Pulseira Cristal - Lilás</option>
-                <option value="PulPre">Pulseira Cristal - Preta</option>
-            </select>
-            </div>
+        <div class="divForm">
+            <label>Produto:   
+                <select class="prod" id="produtoc">
+                    <option value="JogoRosa">Jogo Americano (4 peças) - Rosa</option>
+                    <option value="JogoAma">Jogo Americano (4 peças) - Amarelo</option>
+                    <option value="JogoVerde">Jogo Americano (4 peças) - Verde</option>
+                    <option value="TapRosa">Tapetes Cozinha (3 peças) - Rosa</option>
+                    <option value="TapAma">Tapetes Cozinha (3 peças) - Amarelo</option>
+                    <option value="TapVerm">Tapetes Cozinha (3 peças) - Vermelho</option>
+                    <option value="PulCol">Pulseira Cristal - Colorida</option>
+                    <option value="PulVerm">Pulseira Cristal - Vermelha</option>
+                    <option value="PulRosa">Pulseira Cristal - Rosa</option>
+                    <option value="PulLilas">Pulseira Cristal - Lilás</option>
+                    <option value="PulPre">Pulseira Cristal - Preta</option>
+                </select>
+            </label>
+        </div>
 
-            <div class="divForm">
-                <label for="val">Preço Unitário(R$):</label>
-                <input type="number" id="val" class="input-padrao"/>
-            </div>
+        <div class="divForm">
+            <label id="valorc" for="val">Preço Unitário(R$):</label>
+            <input type="number" id="val" class="input-padrao"/>
+        </div>
 
-            <div class="button">
-                <button type="submit" class="Enviar" 
-                onclick="alert('Formulário enviado com sucesso!')"> Enviar seu pedido</button>
-            </div>
-        </form>
+        <div class="btn">
+            <button id="add_encomenda" class="Enviar"> Enviar seu pedido</button>
+        </div>
+    </form>
 </body>
-
 
 <script src="../js/script.js"></script>
 

@@ -1,9 +1,9 @@
-var titulo = document.querySelector(".titulo")
-titulo.innerHTML = '<img src="../img/emoji.png"> Lista de Encomendas';
+// var titulo = document.querySelector(".titulo")
+// titulo.innerHTML = '<img src="../img/emoji.png"> Lista de Encomendas';
 
 var clientes = document.querySelectorAll(".cliente");
-console.log(clientes);
-console.log(clientes.length); //conta a quantidade de linhas na array
+// console.log(clientes);
+// console.log(clientes.length); //conta a quantidade de linhas na array
 
 for (var i = 0; i < clientes.length; i++) {
     //Captura a quantidade encomendada
@@ -57,11 +57,39 @@ for (var i = 0; i < clientes.length; i++) {
             clientes[i].classList.add("Invalid");
             //console.log("A quantidade inserida pela cliente "+nome+" é inválida");
         }
-        else {
-        }
+        
     }
 }
 
+var botao = document.querySelector("#add_encomenda");
+
+
+
+
+
+botao.addEventListener("click", function (event){
+    event.preventDefault();
+    
+    var prodi = document.getElementById("produtoc").value;
+    var valori = document.getElementById("val").value;
+    var quantidadei = document.getElementById("qtd").value;
+    var nomei = document.getElementById("nome").value;
+
+    console.log("O campo nome é " + nomei + ", o campo produto é " + prodi + ", o campo quantidade é "+ quantidadei +", o campo valor é "+valori);
+})
+
+//---------------------- EVENTOS ----------------------------
+// titulo.addEventListener("click", mensagem);
+
+// //Função nomeada
+// function mensagem(){
+//     console.log("O titulo foi clicado")
+// }
+
+//Função anonima
+// titulo.addEventListener("click", function (){
+//     console.log("O titulo foi clicado - função anonima");
+// })
 
 //ROTINA DE CALCULO DO VALOR TOTAL
 //captura os dados do cliente

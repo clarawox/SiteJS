@@ -31,13 +31,15 @@ h1{
     font-size: 0.5cm;
 }
 
-table, th, td{
+th, td{
     border: 2px solid #2b0e2b;
 }
 
 table{
     background-color: white;
     border-collapse: collapse;
+    border: 2px solid #2b0e2b;
+    border-radius: 5px;
     margin: auto;
     color: #2b0e2b;
 }
@@ -60,36 +62,37 @@ form{
     border: 2px solid #2b0e2b;
     border-radius: 1em;
     text-align: center;
+    margin-bottom: 1em;
     }
 
 .divForm{
-    margin-left: 70px;
-}
-
-form div + div{
-    margin-top:1em;
+    margin-left: 120px;
 }
 
 label{
-    display:flex;
+    display:flex; 
     font-size: 15px;
     font-weight: bold;
     color: #2b0c2b;
-    margin: 0 0 10px;
+    margin: 0 0 20px;
     width:200px;
     text-align: center;
     align-items: center;
-
+    font-size: 0.5cm;
 }
 
-form legend{
+.prod{
+    margin-left: 10px;
+}
+
+/* form legend{
     display:flex;
     font-size: 15px;
     margin: 0 0 10px;
     width:200px;
     text-align: center;
     align-items: center;
-}
+} */
 
 /* fieldset{
     width: 95%;
@@ -103,13 +106,15 @@ input, textarea{
     border:1px solid #2b0c2b;
 }
 
-input:focus, textarea:focus{
-    border-color:#2b0c2b
-}
-
 textarea{
     vertical-align:top;
-    height: 5em;
+    height: 10em;
+}
+
+select{
+    font-size: 0.5cm;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .input-padrao{
@@ -117,27 +122,26 @@ textarea{
     margin: 0 0 20px;
     padding: 10px 25 px;
     width: 85%;
+    font-size: 0.5cm;
 }
 
 .Enviar{
     width: 50%;
     padding: 15px 0;
     background: #a879a8;
-    color: black;
+    color: #2b0c2b;
     font-weight: bold;
-    border: none;
+    border: 1px solid #2b0c2b;
     border-radius: 5px;
     font-size: 1em;
     text-align: center;
-    align-items: center;
 }
 
-.button{
+.btn{
     text-align: center;
     align-items: center;
+    font-size: 0.5cm;
 }
-
-
 
 .Invalid{
     background:lightcoral;
