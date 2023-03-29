@@ -85,22 +85,6 @@ label{
     margin-left: 10px;
 }
 
-/* form legend{
-    display:flex;
-    font-size: 15px;
-    margin: 0 0 10px;
-    width:200px;
-    text-align: center;
-    align-items: center;
-} */
-
-/* fieldset{
-    width: 95%;
-    padding-left: 20%;
-    margin-bottom: 2%;
-    color:#2b0e2b;
-} */
-
 input, textarea{
     width:200px;
     border:1px solid #2b0c2b;
