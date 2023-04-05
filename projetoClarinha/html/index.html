@@ -1,122 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt">
 
-<head>
-    <meta charset="UTF-8">
-    <link href="../css/estilo.css" rel="stylesheet">
-    <title>Sil Fazendo Arte</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <link href="../css/estilo.css" rel="stylesheet">
+        <title>Sil Fazendo Arte</title>
+    </head>
 
-<body>
-    <header>
-        <div class="logo">
-            <img src="../img/logo.png" width="160" title="Sil Fazendo Arte" class="logo"></img>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="../img/logo.png" width="160" title="Sil Fazendo Arte" class="logo"></img>
+            </div>
+        </header>
+
+        <div class="tabela">
+            <h1 class="titulo">
+                <img src="../img/emoji.png"> </img>
+                Lista de encomendas:
+            </h1>
+
+            <table id="tabela">
+                <tr id="titulos">
+                    <th>Nome</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor Unitário</th>
+                    <th>Total</th>
+                </tr>
+
+                <tr class="cliente">
+                    <td class="nome">Margarete</td>
+                    <td class="prod">Jogo Americano (4 peças) - Rosa</td>
+                    <td class="qtd">5</td>
+                    <td class="valor">9.00</td>
+                    <td class="total">0</td>
+                </tr>
+
+                <tr class="cliente">
+                    <td class="nome">Cleide</td>
+                    <td class="prod">Tapetes de cozinha (3 peças) - Azul</td>
+                    <td class="qtd">9</td>
+                    <td class="valor">20.00</td>
+                    <td class="total">0</td>
+                </tr>
+
+                <tr class="cliente">
+                    <td class="nome">Ângelo</td>
+                    <td class="prod">Pulseira Cristal Colorida</td>
+                    <td class="qtd">20</td>
+                    <td class="valor">90.75</td>
+                    <td class="total">0</td>
+                </tr>
+
+                <tr class="cliente">
+                    <td class="nome">Daniele</td>
+                    <td class="prod">Pulseira Cristal Vermelha</td>
+                    <td class="qtd">4</td>
+                    <td class="valor">25.00</td>
+                    <td class="total">0</td>
+                </tr>
+
+                <tr class="cliente">
+                    <td class="nome">Quezia</td>
+                    <td class="prod">Pulseira Cristal Rosa</td>
+                    <td class="qtd">b</td>
+                    <td class="valor">26.00</td>
+                    <td class="total">0</td>
+                </tr>
+            </table>
         </div>
-    </header>
 
-    <div class="tabela">
         <h1 class="titulo">
             <img src="../img/emoji.png"> </img>
-            Lista de encomendas:
+            Nova Encomenda:
         </h1>
+        <ul id="mensagem-erro"></ul>
+        <form id="Form">
+            <div class="divForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" class="input-padrao" />
+            </div>
 
-        <table id="tabela">
-            <tr id="titulos">
-                <th>Nome</th>
-                <th>Produto</th>
-                <th>Quantidade</th>
-                <th>Valor Unitário</th>
-                <th>Total</th>
-            </tr>
+            <div class="divForm">
+                <label for="qtd">Quantidade:</label>
+                <input type="number" id="qtd" class="input-padrao" />
+            </div>
 
-            <tr class="cliente">
-                <td class="nome">Margarete</td>
-                <td class="prod">Jogo Americano (4 peças) - Rosa</td>
-                <td class="qtd">5</td>
-                <td class="valor">9.00</td>
-                <td class="total">0</td>
-            </tr>
+            <div class="divForm">
+                <label>Produto:
+                    <select class="prod" id="prod">
+                        <option>Jogo Americano (4 peças) - Rosa</option>
+                        <option>Jogo Americano (4 peças) - Amarelo</option>
+                        <option>Jogo Americano (4 peças) - Verde</option>
+                        <option>Tapetes Cozinha (3 peças) - Rosa</option>
+                        <option>Tapetes Cozinha (3 peças) - Amarelo</option>
+                        <option>Tapetes Cozinha (3 peças) - Vermelho</option>
+                        <option>Pulseira Cristal - Colorida</option>
+                        <option>Pulseira Cristal - Vermelha</option>
+                        <option>Pulseira Cristal - Rosa</option>
+                        <option>Pulseira Cristal - Lilás</option>
+                        <option>Pulseira Cristal - Preta</option>
+                    </select>
+                </label>
+            </div>
 
-            <tr class="cliente">
-                <td class="nome">Cleide</td>
-                <td class="prod">Tapetes de cozinha (3 peças) - Azul</td>
-                <td class="qtd">9</td>
-                <td class="valor">20.00</td>
-                <td class="total">0</td>
-            </tr>
+            <div class="divForm">
+                <label id="valorc" for="val">Preço Unitário(R$):</label>
+                <input type="number" id="valor" class="input-padrao" />
+            </div>
 
-            <tr class="cliente">
-                <td class="nome">Ângelo</td>
-                <td class="prod">Pulseira Cristal Colorida</td>
-                <td class="qtd">20</td>
-                <td class="valor">90.75</td>
-                <td class="total">0</td>
-            </tr>
+            <div class="btn">
+                <button id="add_encomenda" class="Enviar" type="submit">Enviar seu pedido</button>
+            </div>
+        </form>
 
-            <tr class="cliente">
-                <td class="nome">Daniele</td>
-                <td class="prod">Pulseira Cristal Vermelha</td>
-                <td class="qtd">4</td>
-                <td class="valor">25.00</td>
-                <td class="total">0</td>
-            </tr>
 
-            <tr class="cliente">
-                <td class="nome">Quezia</td>
-                <td class="prod">Pulseira Cristal Rosa</td>
-                <td class="qtd">b</td>
-                <td class="valor">26.00</td>
-                <td class="total">0</td>
-            </tr>
-        </table>
-    </div>
-
-    <h1 class="titulo">
-        <img src="../img/emoji.png"> </img>
-        Nova Encomenda:
-    </h1>
-    <ul id="mensagem-erro"></ul>
-    <form id="Form">
-        <div class="divForm">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" class="input-padrao"/>
-        </div>
-
-        <div class="divForm">
-            <label for="qtd">Quantidade:</label>
-            <input type="number" id="qtd" class="input-padrao"/>
-        </div>
-
-        <div class="divForm">
-            <label>Produto:   
-                <select class="prod" id="prod">
-                    <option>Jogo Americano (4 peças) - Rosa</option>
-                    <option>Jogo Americano (4 peças) - Amarelo</option>
-                    <option>Jogo Americano (4 peças) - Verde</option>
-                    <option>Tapetes Cozinha (3 peças) - Rosa</option>
-                    <option>Tapetes Cozinha (3 peças) - Amarelo</option>
-                    <option>Tapetes Cozinha (3 peças) - Vermelho</option>
-                    <option>Pulseira Cristal - Colorida</option>
-                    <option>Pulseira Cristal - Vermelha</option>
-                    <option>Pulseira Cristal - Rosa</option>
-                    <option>Pulseira Cristal - Lilás</option>
-                    <option>Pulseira Cristal - Preta</option>
-                </select>
-            </label>
-        </div>
-
-        <div class="divForm">
-            <label id="valorc" for="val">Preço Unitário(R$):</label>
-            <input type="number" id="valor" class="input-padrao"/>
-        </div>
-
-        <div class="btn">
-            <button id="add_encomenda" class="Enviar" type="submit">Enviar seu pedido</button>
-        </div>
-    </form>
-</body>
-
-<script src="../js/calculaTotal.js"></script>
-<script src="../js/form.js"></script>
+        <script src="../js/calculaTotal.js"></script>
+        <script src="../js/form.js"></script>
+        <script src="../js/remover-encomenda.js"></script>
+    </body>
 
 </html>

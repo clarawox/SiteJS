@@ -52,10 +52,18 @@ function validaQtde(qtde){
     }
 }
 
-function validaVal(val){
-    if(!isNaN(val) && val>0){
+function validaVal(valor){
+    if(!isNaN(valor) && (valor>0)){
         return true;
     }else{
         return false;
+    }
+}
+
+function validaNome(nome){
+    if(nome=="" || (!isNaN(nome))){
+        return false;
+    }else{
+        return true;
     }
 }
