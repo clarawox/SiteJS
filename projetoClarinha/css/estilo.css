@@ -42,6 +42,7 @@ table {
     border-radius: 5px;
     margin: auto;
     color: #2b0e2b;
+    margin-bottom: 50px;
 }
 
 th, td {
@@ -140,4 +141,28 @@ select {
 .fadeOut{
     opacity: 0;
     transition: 3s;
+}
+
+.filtrar-tabela{
+    width: 250px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.filtro{
+    margin-left: 325px;
+    color: #2b0c2b;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.invisivel{
+    display: none;
+}
+
+footer{
+    text-align: center;
+    background: #660066;
+    padding: 5px 0;
+    color: whitesmoke
 }
