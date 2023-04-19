@@ -5,20 +5,30 @@ botao.addEventListener("click", function (event) {
 
     var form = document.querySelector("#Form");
 
-    var validacao = validaEncomenda(obtemEncomenda(form));
+    var encomenda = obtemEncomenda(form);
 
-    document.getElementById("mensagem-erro").innerHTML = "";
-
+    var validacao = validaEncomenda(encomenda);
+    
     if (validacao.length > 0) {
         exibeMensagemErro(validacao);
         return;
     }
 
-    var tbl = document.getElementById("tabela");
-    tbl.appendChild(montaTR(obtemEncomenda(form)));
+    //var tbl = document.getElementById("tabela");
+    //tbl.appendChild(montaTR(obtemEncomenda(form)));
+    
+    addEncomendaNaTabela(encomenda);
 
     form.reset();
+
+    document.getElementById("mensagem-erro").innerHTML = "";
 })
+
+function addEncomendaNaTabela(encomenda){
+    var encomendaTr = montaTR(encomenda);
+    var tabela = document.querySelector("#tabela");
+    tabela.appendChild(encomendaTr);
+}
 
 function obtemEncomenda(form) {
     var encomenda = {

@@ -1,0 +1,39 @@
+{
+    "encomendas_web": [
+        {
+            "nome": "Bruce",
+            "produto": "Jogo Americano (4 peças) - Rosa",
+            "qtd": 2,
+            "valor": 24.50,
+            "total":0
+        },
+        {
+            "nome": "Harry",
+            "produto": "Jogo Americano (4 peças) - Azul",
+            "qtd": 2,
+            "valor": 24.50,
+            "total":0
+        },
+        {
+            "nome": "Hermione",
+            "produto":"Conjunto de penas e tinteiro",
+            "qtd":5,
+            "valor":14.50,
+            "total":0
+        },
+        {
+            "nome": "Ron",
+            "produto":"Veneno para aranhas",
+            "qtd":10,
+            "valor":26.90,
+            "total":0
+        },
+        {
+            "nome": "Ginna",
+            "produto":"Poção do amor",
+            "qtd":1,
+            "valor":50,
+            "total":0
+        }
+    ]
+}
