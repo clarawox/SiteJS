@@ -11,15 +11,14 @@
 </head>
 
 <body>
-    <div class="adocao">
     <header>
         <div class="menu">
             <div id="nav" class="overLay">
                 <a href="#" class="closeBtn" onClick="closeNav()">&times;</a>
                 <div class="overLay-content">
-                    <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                     <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Sobre</a>
-                    <a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Encomendas</a>
+                    <a href="encomendas.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Encomendas</a>
                     <a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i> Contato</a>
                     <a href="adocao.html"><i class="fa fa-phone-square" aria-hidden="true"></i> Adoção</a>
                 </div>
@@ -31,16 +30,31 @@
         <div class="logo">
             <img src="../img/logo.png" width="160" title="Sil Fazendo Arte" class="logo"></img>
         </div>
-    </div>
     </header>
 
-    <body class="adocao">
-        <h1>Cats</h1>
-        <div id="cat-picture">
-            <img class="imagem_gato" src="" alt="" width="250" height="250" />
+    <body>
+        <div class="adocao">
+            <h1 class="titulo">
+                <img src="../img/emoji.png"></img>
+                Gatos para a adoção:
+            </h1>
+            <div id="cat-picture">
+                <img class="imagem_gato" src="" alt="" width="250" height="250" />
+            </div>
+            <div class="btn">
+                <button class="trocar" onclick="newCat()">Escolha outro gato</button>
+            </div>
         </div>
-        <button class="trocar" onclick="newCat()">Get another cat</button>
+
+        <footer>
+            <div class="logo">
+                <img src="../img/logo.png" width="160" title="Sil Fazendo Arte" class="logo"></img>
+                <p class="copyright">&copy; Copyright Sil Fazendo Arte - 2023</p>
+            </div>
+        </footer>
+
         <script src="../js/api.js"></script>
-    </body class="adocao">
+        <script src="../js/menu.js"></script>
+    </body>
 
 </html>
