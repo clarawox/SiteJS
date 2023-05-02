@@ -17,7 +17,7 @@
                 <div class="overLay-content">
                     <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                     <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Sobre</a>
-                    <a href="adocao.html"><i class="fa-sharp fa-solid fa-star" aria-hidden="true"></i> Adoção</a>
+                    <a href="adocao.html"><i class="fa-sharp fa-solid fa-pen-to-square" aria-hidden="true"></i> Adoção</a>
                     <a href="encomendas.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Encomendas</a>
                     <a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i> Contato</a>
                 </div>
@@ -36,7 +36,7 @@
         Nova Encomenda:
     </h1>
     <ul id="mensagem-erro"></ul>
-    <form id="Form">
+    <form method="get" id="Form" action=".">
         <div class="divForm">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" class="input-padrao" />
@@ -69,6 +69,32 @@
             <label for="val">Preço Unitário(R$):</label>
             <input type="number" id="valor" class="input-padrao" />
         </div>
+
+        <div class="divForm">
+            <label>Cep:</label>
+            <input name="cep" class="input-padrao" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" /><br />
+        </div>
+
+        <div class="divForm">
+            <label>Rua:</label>
+            <input name="rua" class="input-padrao" type="text" id="rua" size="60" /><br />
+        </div>
+
+        <div class="divForm">
+            <label>Bairro:</label>
+            <input name="bairro" class="input-padrao" type="text" id="bairro" size="40" /><br />
+        </div>
+
+        <div class="divForm">
+            <label>Cidade:</label>
+            <input name="cidade" class="input-padrao" type="text" id="cidade" size="40" /><br />
+        </div>
+
+        <div class="divForm">
+            <label>Estado:</label>
+            <input name="uf" class="input-padrao" type="text" id="uf" size="2" /><br />
+        </div>
+
 
         <div class="btn">
             <button id="add_encomenda" class="Enviar" type="submit">Enviar seu pedido</button>
@@ -155,6 +181,7 @@
     <script src="../js/filtra.js"></script>
     <script src="../js/busca-encomendas.js"></script>
     <script src="../js/menu.js"></script>
+    <script src="../js/consulta_cep.js"></script>
 </body>
 
 </html>
