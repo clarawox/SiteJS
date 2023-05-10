@@ -236,9 +236,7 @@ label {
     font-weight: bold;
     color: #2b0c2b;
     margin: 0 0 20px;
-    width: 200px;
-    text-align: center;
-    align-items: center;
+    width: 250px;
     font-size: 0.5cm;
 }
 
@@ -287,6 +285,14 @@ select {
 .btn {
     text-align: center;
     align-items: center;
+    padding-bottom: 10px;
+    padding: 5cm;
+}
+
+.btn2 {
+    display: flex;
+    text-align: center;
+    align-items: center; 
     padding-bottom: 10px;
 }
 

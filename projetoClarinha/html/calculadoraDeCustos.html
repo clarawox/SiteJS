@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/estilo.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudFlare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Calculadora de Lucros</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div id="nav" class="overLay">
+                <a href="#" class="closeBtn" onClick="closeNav()">&times;</a>
+                <div class="overLay-content">
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Sobre</a>
+                    <a href="adocao.html"><i class="fa-sharp fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                        Adoção</a>
+                    <a href="encomendas.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Encomendas</a>
+                    <a href="calculadoraDeCustos.html"><i class="fa fa-phone-square" aria-hidden="true"></i>
+                        Calculadora</a>
+                </div>
+            </div>
+            <button class="nav-button" onClick="openNav()">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+        </div>
+        <div class="logo">
+            <img src="../img/logo.png" width="160" title="Sil Fazendo Arte" class="logo"></img>
+        </div>
+    </header>
+
+    <h1 class="titulo">
+        <img src="../img/emoji.png"> </img>
+        Adicione seus insumos:
+    </h1>
+    <ul id="mensagem-erro"></ul>
+    <form method="get" id="FormInsumo" action=".">
+        <div class="divForm">
+            <label for="produ">Produto:</label>
+            <input type="text" id="produ" class="input-padrao" />
+        </div>
+       
+        <div class="divForm">
+            <label for="insumo">Insumo:</label>
+            <input type="text" id="insumo" class="input-padrao" />
+        </div>
+
+        <div class="divForm">
+            <label for="quantidade">Quantidade necessária:</label>
+            <input type="number" id="quantidade" class="input-padrao" />
+        </div>
+
+        <div class="divForm">
+            <label for="quantEmba">Quantidade na embalagem:</label>
+            <input type="number" id="quantEmba" class="input-padrao" />
+        </div>
+
+        <div class="divForm">
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" class="input-padrao" />
+        </div>
+
+        <div class="divForm">
+            <label for="lucro">Lucro desejado (%):</label>
+            <input type="number" id="lucro" class="input-padrao" />
+        </div>
+
+        <div class="btn2">
+            <button id="add_insumo" class="Enviar" type="submit">Adicionar insumo</button>
+            <button id="calcular" class="Enviar" type="submit">Calcular</button>
+        </div>
+    </form>
+
+    <div class="tabela">
+        <h1 class="titulo">
+            <img src="../img/emoji.png"> </img>
+            Lista de insumos:
+        </h1>
+
+        <table id="tabelaInsumo">
+            <tr id="titulos">
+                <th>Insumo:</th>
+                <th>Quantidade a ser consumida:</th>
+                <th>Quantidade por embalagem:</th>
+                <th>Valor por embalagem:</th>
+            </tr>
+
+            <tr class="insumo" style="visibility: hidden;">
+                <td class="insumo" style="visibility: hidden;"></td>
+                <td class="qtd" style="visibility: hidden;"></td>
+                <td class="qtdEmbalagem" style="visibility: hidden;"></td>
+                <td class="valor" style="visibility: hidden;"></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <footer class="footer">
+        <div class="logo">
+            <img src="../img/logo.png" width="160" title="Sil Fazendo Arte" class="logo"></img>
+            <p class="copyright">&copy; Copyright Sil Fazendo Arte - 2023</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -2,10 +2,10 @@ const img = document.getElementById("cat-picture").querySelector(".imagem_gato")
 const button = document.querySelector(".trocar");
 
 function setLoading() {
-	button.innerText = "Fetching a cat";
+	button.innerText = "Buscando gatos";
 }
 function clearLoading() {
-	button.innerText = "Get another cat";
+	button.innerText = "Mostrar outro gato";
 }
 async function newCat() {
 	setLoading();
