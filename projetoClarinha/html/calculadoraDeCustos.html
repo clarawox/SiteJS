@@ -16,7 +16,7 @@
                 <a href="#" class="closeBtn" onClick="closeNav()">&times;</a>
                 <div class="overLay-content">
                     <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                    <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Sobre</a>
+                    <a href="teste.html"><i class="fa fa-heart" aria-hidden="true"></i> Sobre</a>
                     <a href="adocao.html"><i class="fa-sharp fa-solid fa-pen-to-square" aria-hidden="true"></i>
                         Adoção</a>
                     <a href="encomendas.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Encomendas</a>
@@ -69,9 +69,19 @@
             <input type="number" id="lucro" class="input-padrao" />
         </div>
 
+        <div class="divForm" style="display: none;">
+            <label>Valor total do produto:</label>
+            <label id="valTotal">0</label>
+        </div>
+
+        <div class="divForm" style="display: none;">
+            <label>Valor total do produto com lucro:</label>
+            <label id="valLucro">0</label>
+        </div>
+
         <div class="btn2">
             <button id="add_insumo" class="Enviar" type="submit">Adicionar insumo</button>
-            <button id="calcular" class="Enviar" type="submit">Calcular</button>
+            <button id="calcular_valor" class="Enviar" type="button">Calcular</button>
         </div>
     </form>
 
@@ -82,21 +92,26 @@
         </h1>
 
         <table id="tabelaInsumo">
-            <tr id="titulos">
-                <th>Insumo:</th>
-                <th>Quantidade a ser consumida:</th>
-                <th>Quantidade por embalagem:</th>
-                <th>Valor por embalagem:</th>
-            </tr>
-
-            <tr class="insumo" style="visibility: hidden;">
-                <td class="insumo" style="visibility: hidden;"></td>
-                <td class="qtd" style="visibility: hidden;"></td>
-                <td class="qtdEmbalagem" style="visibility: hidden;"></td>
-                <td class="valor" style="visibility: hidden;"></td>
-            </tr>
+            <thead>
+                <tr id="titulos">
+                    <th>Insumo:</th>
+                    <th>Quantidade a ser consumida:</th>
+                    <th>Quantidade por embalagem:</th>
+                    <th>Valor por embalagem:</th>
+                </tr>
+            </thead>
+            <tbody id="dados">
+                <tr class="insumo" style="visibility: hidden;">
+                    <td class="nomeInsumo" style="visibility: hidden;"></td>
+                    <td class="qtd" style="visibility: hidden;"></td>
+                    <td class="qtdEmbalagem" style="visibility: hidden;"></td>
+                    <td class="val" style="visibility: hidden;"></td>
+                </tr>
+            </tbody>
 
         </table>
+
+        
     </div>
 
     <footer class="footer">
@@ -108,6 +123,7 @@
 
     <script src="../js/insumos/adicionarInsumo.js"></script>
     <script src="../js/insumos/calculaLucro.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>
