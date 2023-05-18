@@ -3,12 +3,16 @@ var insumos = document.querySelectorAll(".insumo")
 for(var i=0; i<insumos.length; i++){
     var insu = insumos[i].querySelector(".insumo").textContent;
 
-    var quantidade = insumos[i].querySelector(".quantidade").textContent;
+    var quantidade = insumos[i].querySelector(".quantidade").value;
 
     var quantidadeEmba = insumos[i].querySelector(".quantEmba").textContent;
 
     var valor = insumos[i].querySelector(".valor").textContent;
 }
+
+
+
+
 
 var botao = document.querySelector("#add_insumo");
 
@@ -16,9 +20,7 @@ botao.addEventListener("click", function (event){
     event.preventDefault();
 
     var form = document.querySelector("#FormInsumo");
-
     var insumo = obtemInsumo(form);
-
     var validacao = validaInsumo(insumo);
     
     if (validacao.length > 0) {
@@ -26,12 +28,16 @@ botao.addEventListener("click", function (event){
         return;
     }
 
-    addInsumoNaTabela(encomenda);
-
+    addInsumoNaTabela(tabela);
     form.reset();
-
     document.getElementById("erro").innerHTML = "";
 })
+
+function addInsumoNaTabela(insumo){
+    var insumoTr = montaLinha(insumo);
+    var tabela = document.querySelector("#tabelaInsumo");
+    insumo.appendChild(insumoTr);
+}
 
 function obtemInsumo(form){
     var insumo = {
