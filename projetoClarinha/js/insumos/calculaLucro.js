@@ -1,23 +1,21 @@
-var btnAdd= document.getElementById("calcular_valor");
-var custoTotal = 0;
+var btnAdd= document.getElementById("calcular_valor"); 
+
 btnAdd.addEventListener("click", function(){
-    var soma = 1;
     
     var insumos = document.querySelectorAll('.insumo');
     
     insumos.forEach(insumo => {
         
-        console.log(insumo);
-        var quantidade = insumo.querySelector('.qtd').textContent;
-        var quantidadeEmbalagem = insumo.querySelector('.qtdEmbalagem').textContent;
-        var valor = insumo.querySelector('.val').textContent;
-        
-        custoTotal = calTotal(parseInt(quantidade), parseInt(quantidadeEmbalagem), parseInt(valor));
-        console.log(custoTotal);
-        soma += parseFloat(custoTotal);
+        console.log(insumo);        
+        var quantidade = parseFloat(insumo.querySelector('.qtd').textContent);
+        var quantidadeEmbalagem = parseFloat(insumo.querySelector('.qtdEmbalagem').textContent);
+        var valor = parseFloat(insumo.querySelector('.val').textContent);
 
+        var custoTotal = calTotal(quantidade, quantidadeEmbalagem, valor);
+        console.log(custoTotal);
+        
+        
     });
-    console.log(soma);
 
 })
 
@@ -43,8 +41,3 @@ function validaQuant(qtde, qtdEmba){
     }
 }
 
-function calTotal(qtd, qtdEmba, val){
-    var total = 0;
-    total = (qtd/qtdEmba)*val;
-    return total;
-}

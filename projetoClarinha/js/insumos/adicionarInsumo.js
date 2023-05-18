@@ -1,14 +1,21 @@
-// var insumos = document.querySelectorAll(".insumo")
+var insumos = document.querySelectorAll(".insumo")
 
-// for(var i=0; i<insumos.length; i++){
-//     var insu = insumos[i].querySelector(".insumo").textContent;
+for(var i=0; i<insumos.length; i++){
 
-//     var quantidade = insumos[i].querySelector(".quantidade").textContent;
+    var quantidade = insumos[i].querySelector(".qtd").textContent;
 
-//     var quantidadeEmba = insumos[i].querySelector(".quantEmba").textContent;
+    var quantidadeEmba = insumos[i].querySelector(".qtdEmbalagem").textContent;
 
-//     var valor = insumos[i].querySelector(".valor").textContent;
-// }
+    var valor = insumos[i].querySelector(".val").textContent;
+
+    if (!isNaN(valor) && !isNaN(quantidade)) {
+        //Calcula o valor total
+        var valTotal = quantidade * valor;
+        //console.log(valTotal)
+        insumos[i].querySelector(".val").textContent = parseFloat(valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        insumos[i].querySelector(".total").textContent = valTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+}
 
 
 
@@ -54,8 +61,8 @@ function montaLinha(insumo){
     linha.appendChild(montaColuna(insumo.insu, "nomeInsumo"));
     linha.appendChild(montaColuna(insumo.quantidade, "qtd"));
     linha.appendChild(montaColuna(insumo.qtdEmba, "qtdEmbalagem"));
-    linha.appendChild(montaColuna(insumo.valor, "val"));
-
+    linha.appendChild(montaColuna(formatar(insumo.valor, "val")));
+    linha.appendChild(montaColuna(formatar(calCusto(insumo.quantidade, insumo.qtdEmba, insumo.valor))))
     return linha;
 }
 
@@ -88,4 +95,14 @@ function exibeErros(erros){
         ul.appendChild(li);
         ul.classList.add("error")
     })
+}
+
+function calCusto(qtd, qtdEmba, val){
+    let total = (qtd/qtdEmba)*val;
+    return total;
+}
+
+function formatar(valor){
+    var valorFor = parseFloat(valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    return valorFor;
 }
