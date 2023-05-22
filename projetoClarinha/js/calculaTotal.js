@@ -1,5 +1,5 @@
-
 var clientes = document.querySelectorAll(".cliente");
+
 for (var i = 0; i < clientes.length; i++) {
 
     var qtd = clientes[i].querySelector(".qtd").textContent;
@@ -32,6 +32,7 @@ for (var i = 0; i < clientes.length; i++) {
         }
     }
 }
+
 
 function formataValor(valor){
     var valorFor = parseFloat(valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });

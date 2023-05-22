@@ -38,12 +38,36 @@
         Adicione seus insumos:
     </h1>
     <ul id="erro"></ul>
-    <form method="get" id="FormInsumo" action=".">
+
+    <form method="get" id="FormProduto">
         <div class="divForm">
             <label for="produ">Produto:</label>
             <input type="text" id="produ" class="input-padrao" />
         </div>
-       
+
+        <div class="divForm">
+            <label for="lucro">Lucro desejado (%):</label>
+            <input type="number" id="lucro" class="input-padrao" />
+        </div>
+
+        <div class="divForm" id="totalProd" style="display: none;">
+            <label>Valor total do produto:</label>
+            <label id="valTotal">0</label>
+        </div>
+
+        <div class="divForm" id="totalLuc" style="display: none;">
+            <label>Valor total do produto com lucro:</label>
+            <label id="valLucro">0</label>
+        </div>
+        <div>
+            <button id="calcular_valor" onclick="toggleDiv()" class="Enviar" type="button">Calcular</button>
+            <button id="exportarPExcel" onclick="exportarExcel()" class="Enviar" type="button">Exportar para o excel</button>
+        </div>
+    </form>
+
+    <br>
+
+    <form method="get" id="FormInsumo" action=".">
         <div class="divForm">
             <label for="insumo">Insumo:</label>
             <input type="text" id="insumo" class="input-padrao" />
@@ -64,25 +88,7 @@
             <input type="number" id="valor" class="input-padrao" />
         </div>
 
-        <div class="divForm">
-            <label for="lucro">Lucro desejado (%):</label>
-            <input type="number" id="lucro" class="input-padrao" />
-        </div>
-
-        <div class="divForm" style="display: none;">
-            <label>Valor total do produto:</label>
-            <label id="valTotal">0</label>
-        </div>
-
-        <div class="divForm" style="display: none;">
-            <label>Valor total do produto com lucro:</label>
-            <label id="valLucro">0</label>
-        </div>
-
-        <div class="btn2">
-            <button id="add_insumo" class="Enviar" type="submit">Adicionar insumo</button>
-            <button id="calcular_valor" class="Enviar" type="button">Calcular</button>
-        </div>
+        <button id="add_insumo" class="Enviar" type="submit">Adicionar insumo</button>
     </form>
 
     <div class="tabela">
@@ -104,16 +110,13 @@
             <tbody id="dados">
                 <tr class="insumo">
                     <td class="nomeInsumo"></td>
-                    <td class="qtd">0</td>
-                    <td class="qtdEmbalagem">0</td>
-                    <td class="val">0</td>
-                    <td class="total">0</td>
+                    <td class="qtd"></td>
+                    <td class="qtdEmbalagem"></td>
+                    <td class="val"></td>
+                    <td class="total"></td>
                 </tr>
             </tbody>
-
         </table>
-
-        
     </div>
 
     <footer class="footer">
@@ -124,8 +127,9 @@
     </footer>
 
     <script src="../js/insumos/adicionarInsumo.js"></script>
-    <script src="../js/insumos/calculaLucro.js"></script>
+    <script src="../js/insumos/exportarParaExcel.js"></script>
     <script src="../js/menu.js"></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
 </body>
 
 </html>
