@@ -19,7 +19,7 @@ btnCal.addEventListener("click", function () {
     lucro = lucro / 100;
     var vallucro = (soma * lucro) + soma;
     var lucroTotal = document.getElementById("valLucro");
-    lucroTotal.textContent = formatar(vallucro);
+    lucroTotal.textContent = formatar(Math.ceil(vallucro));
 })
 
 btnAdd.addEventListener("click", function (event) {
